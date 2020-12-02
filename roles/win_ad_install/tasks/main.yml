@@ -12,7 +12,7 @@
   register: active_directory_controllers
 
 - name: Reboot once DC created
-    win_reboot:
+  win_reboot:
   when: active_directory_controllers.reboot_required
 
 - name: List Domain Controllers in domain
